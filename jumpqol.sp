@@ -11,8 +11,8 @@ public Plugin myinfo =
 {
     name = "JumpQoL",
     author = "ILDPRUT",
-    description = "Adds various improvements to jumping.",
-    version = "1.1.4",
+    description = "Adds various improvements to jumping.(PT-BR Edit)",
+    version = "1.1.5",
 }
 
 #define DEBUG 0
@@ -1879,7 +1879,7 @@ public void OnPluginStart()
     g_Setting_ConVar_autostop.AddChangeHook(ConVarChanged_Setting_Autostop);
 
     g_settings[SETTING_PROJDECALS].name = "projdecals";
-    g_settings[SETTING_PROJDECALS].desc = "Controls if decals should be elongated when a prop is hit at an angle.";
+    g_settings[SETTING_PROJDECALS].desc = "Controla se os decalques (marcas) devem ser alongados quando um objeto é atingido em um ângulo.";
     g_settings[SETTING_PROJDECALS].expl = "";
     g_settings[SETTING_PROJDECALS].type = SETTING_BOOL;
     g_settings[SETTING_PROJDECALS].f_start = Projdecals_Start;
@@ -1890,7 +1890,7 @@ public void OnPluginStart()
     g_settings[SETTING_PROJDECALS].Init(false, false);
 
     g_settings[SETTING_SHOWDETDECALS].name = "showdetdecals";
-    g_settings[SETTING_SHOWDETDECALS].desc = "Makes explosives you manually detonate produce decals.";
+    g_settings[SETTING_SHOWDETDECALS].desc = "Faz com que explosivos detonados manualmente produzam decalques (marcas).";
     g_settings[SETTING_SHOWDETDECALS].expl = "";
     g_settings[SETTING_SHOWDETDECALS].type = SETTING_BOOL;
     g_settings[SETTING_SHOWDETDECALS].f_init = Showdetdecals_Init;
@@ -1902,7 +1902,7 @@ public void OnPluginStart()
     g_settings[SETTING_SHOWDETDECALS].Init(false, false);
 
     g_settings[SETTING_KEEPBLASTSTATE].name = "keepblaststate";
-    g_settings[SETTING_KEEPBLASTSTATE].desc = "Prevents the blast state from getting cleared when using an explosion to leave the ground.";
+    g_settings[SETTING_KEEPBLASTSTATE].desc = "mpede que o estado de explosão seja removido ao sair do chão (mantém o impulso do rocket jump ou sticky jump).";
     g_settings[SETTING_KEEPBLASTSTATE].expl = "";
     g_settings[SETTING_KEEPBLASTSTATE].type = SETTING_BOOL;
     g_settings[SETTING_KEEPBLASTSTATE].f_start = Keepblaststate_Start;
@@ -1913,7 +1913,7 @@ public void OnPluginStart()
     g_settings[SETTING_KEEPBLASTSTATE].Init(true, false);
 
     g_settings[SETTING_RELOADFIRE].name = "reloadfire";
-    g_settings[SETTING_RELOADFIRE].desc = "Makes you shoot on the same tick you reload canceled (no firing sound if you only press for 1 tick).";
+    g_settings[SETTING_RELOADFIRE].desc = "Faz você atirar no mesmo milisegundo em que cancela o carregamento (sem som de tiro se pressionar por apenas 1 milisegundo).";
     g_settings[SETTING_RELOADFIRE].expl = "";
     g_settings[SETTING_RELOADFIRE].type = SETTING_BOOL;
     g_settings[SETTING_RELOADFIRE].f_init = Reloadfire_Init;
@@ -1925,7 +1925,7 @@ public void OnPluginStart()
     g_settings[SETTING_RELOADFIRE].Init(true, false);
 
     g_settings[SETTING_ATTACK2FIRE].name = "attack2fire";
-    g_settings[SETTING_ATTACK2FIRE].desc = "Lets you shoot rockets while attack2 is pressed.";
+    g_settings[SETTING_ATTACK2FIRE].desc = "Permite atirar foguetes enquanto o botão secundário (attack2) está sendo pressionado.";
     g_settings[SETTING_ATTACK2FIRE].expl = "0: Disable.\n1: Block attack2 from all primary rocket launchers.\n2: Allow Cow Mangler 5000 charged shots.";
     g_settings[SETTING_ATTACK2FIRE].type = SETTING_INT;
     g_settings[SETTING_ATTACK2FIRE].f_init = Attack2fire_Init;
@@ -1937,7 +1937,7 @@ public void OnPluginStart()
     g_settings[SETTING_ATTACK2FIRE].Init(1, false);
 
     g_settings[SETTING_RAMPFIX].name = "rampfix";
-    g_settings[SETTING_RAMPFIX].desc = "Prevents the event where you sometimes stop up on a ramp you should have been able to slide up.";
+    g_settings[SETTING_RAMPFIX].desc = "PCorrige o problema onde às vezes você para em uma rampa que deveria conseguir deslizar normalmente.";
     g_settings[SETTING_RAMPFIX].expl = "";
     g_settings[SETTING_RAMPFIX].type = SETTING_BOOL;
     g_settings[SETTING_RAMPFIX].f_start = Rampfix_Start;
@@ -1948,7 +1948,7 @@ public void OnPluginStart()
     g_settings[SETTING_RAMPFIX].Init(true, false);
 
     g_settings[SETTING_SLIDEEBFIX].name = "slideebfix";
-    g_settings[SETTING_SLIDEEBFIX].desc = "Prevents you from somtimes not getting an edgebug on an auto edgebug with a slide setup.";
+    g_settings[SETTING_SLIDEEBFIX].desc = "Corrige o bug onde você às vezes não consegue dar um edgebug com um começo de deslizamento.";
     g_settings[SETTING_SLIDEEBFIX].expl = "";
     g_settings[SETTING_SLIDEEBFIX].type = SETTING_BOOL;
     g_settings[SETTING_SLIDEEBFIX].f_init = Slideebfix_Init;
@@ -1960,7 +1960,7 @@ public void OnPluginStart()
     g_settings[SETTING_SLIDEEBFIX].Init(true, false);
 
     g_settings[SETTING_FLUSHSLOPEFIX].name = "flushslopefix";
-    g_settings[SETTING_FLUSHSLOPEFIX].desc = "Prevents you colliding with hidden sides of sloped brushes and optionally removes pixelwalking.";
+    g_settings[SETTING_FLUSHSLOPEFIX].desc = "Impede colisões com lados de superfícies inclinadas, opcionalmente, remove o 'pixelwalking'.";
     g_settings[SETTING_FLUSHSLOPEFIX].expl = "0: No prevention.\n1: Prevent some bugs on ramps made of multiple brushes.\n2: Prevent pixelwalking too.";
     g_settings[SETTING_FLUSHSLOPEFIX].type = SETTING_INT;
     g_settings[SETTING_FLUSHSLOPEFIX].f_start = Flushslopefix_Start;
@@ -1971,7 +1971,7 @@ public void OnPluginStart()
     g_settings[SETTING_FLUSHSLOPEFIX].Init(0, false);
 
     g_settings[SETTING_SYNC].name = "sync";
-    g_settings[SETTING_SYNC].desc = "Fixes rockets getting desynced with the shooter to remove randomness.";
+    g_settings[SETTING_SYNC].desc = "Corrige o descompasso entre foguetes e o atirador para remover aleatoriedade.";
     g_settings[SETTING_SYNC].expl = "";
     g_settings[SETTING_SYNC].type = SETTING_BOOL;
     g_settings[SETTING_SYNC].f_init = Sync_Init;
@@ -1983,7 +1983,7 @@ public void OnPluginStart()
     g_settings[SETTING_SYNC].Init(true, false);
 
     g_settings[SETTING_FAKEDELAY].name = "fakedelay";
-    g_settings[SETTING_FAKEDELAY].desc = "Tries to display rockets as if you were on the specified delay (scoreboard ping + net_graph lerp).";
+    g_settings[SETTING_FAKEDELAY].desc = "Tenta exibir os foguetes como se você estivesse com o lag especificado (ping + net_graph lerp).";
     g_settings[SETTING_FAKEDELAY].expl = "-1: Disable.\n0 or above: Delay to fake in ms.";
     g_settings[SETTING_FAKEDELAY].type = SETTING_INT;
     g_settings[SETTING_FAKEDELAY].f_init = Fakedelay_Init;
